@@ -26,9 +26,9 @@ def user_input_features():
  st.subheader('User Input parameters')
  st.write(df)
  
- 
- prediction = modelGaussianIris.predict(df)
- prediction_proba = modelGaussianIris.predict_proba(df)
+ loaded_model = pickle.load("Iris.h5"),"rb"))
+ prediction = modelloaded_model.predict(df)
+ prediction_proba = modeloaded_model.predict_proba(df)
  
  st.subheader('Class labels and their corresponding index number')
  st.write(Y.unique())
